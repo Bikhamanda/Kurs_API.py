@@ -44,7 +44,6 @@ def IDRtoBTC():
         print('Maaf bank tidak tersedia')
     else:
         kursjual = float(data.json()['jual'])
-        # kursbeli = float(data.json()['beli'])
         kursbitcoin = float(listrate['USD']['sell'])
         nilaiuang = float(input('Silahkan input nominal uang yang akan dikonversi: Rp. '))
         hasilkonversi = nilaiuang/kursjual
@@ -62,7 +61,6 @@ def BTCtoIDR():
     if str(list(data)) == """[b'{"error":"true"}']""":
         print('Maaf bank tidak tersedia')
     else:
-        # kursjual = float(data.json()['jual'])
         kursbeli = float(data.json()['beli'])
         kursbitcoin = float(listrate['USD']['sell'])
         nilaiuang = float(input('Silahkan input nominal uang yang akan dikonversi: Btc '))
